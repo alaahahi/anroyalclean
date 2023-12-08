@@ -1,0 +1,135 @@
+.contatct{
+    padding: 40px 0 50px 0;
+    @media(max-width:1023px){
+        &{
+            padding: 25px 0 20px 0;
+        }
+    }
+    @media(max-width:539px){
+        &{
+            padding: 20px 0 15px 0;
+        }
+    }
+    .row{
+        @media(max-width:1023px){
+            &{
+                row-gap: 30px;
+            }
+        }
+    }
+    .contatctBox{
+        padding: 30px 30px;
+        box-shadow: 0 3px 20px 0 rgba(0,0,0,0.06);
+        border-radius: 5px;
+        @media(max-width:539px){
+            &{
+                padding: 18px 18px;
+            }
+        }
+        .contatctBox__row{
+            margin-bottom: 20px;
+            .contatctBox__label{
+                font-size: 14px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 7px;
+                @media(max-width:539px){
+                    &{
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .contatctBox__input{
+                border-radius: 4px;
+                font-size: 13px;
+                height: 42px;
+                &:focus{
+                    border-color: #c1a265;
+                    box-shadow: 0 0 0 0.25rem rgba(193, 162, 101,.25);
+                }
+            }
+            .contatctBox__textarea{
+                height: 170px;
+                font-size: 13px;
+                border-radius: 4px;
+                &:focus{
+                    border-color: rgb(193, 162, 101);
+                    box-shadow: 0 0 0 0.25rem rgba(193, 162, 101, 0.25);
+                }
+            }
+        }
+        .contactform-btn{
+            padding: 10px 70px;
+            background-color: #d8b347;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #000;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    .conbox{
+        padding: 35px 34px;
+        border-radius: 4px;
+        box-shadow: 0 3px 20px 0 rgba(0,0,0,0.06);
+        margin-bottom: 30px;
+        @media(max-width:1199px){
+            &{
+                padding: 25px 20px;
+                margin-bottom: 20px;
+            }
+        }
+        @media(max-width:1023px){
+            &{
+                margin-bottom: 15px;
+            }
+        }
+        .conboxRow{
+            display: flex;
+            align-items: flex-start;
+            column-gap: 10px;
+            margin-bottom: 15px;
+            &:nth-last-child(1){
+                margin-bottom: 0;
+            }
+            i{
+                font-size: 15px;
+                width: 15px;
+                transform: translateY(3px);
+                color: #d8b347;
+            }
+            .conboxRow__link{
+                width: calc(100% - 15px);
+                font-weight: bold;
+                font-size: 14px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    color: #d8b347;
+                    transition: all 0.3s ease-in-out;
+                }
+                @media(max-width:1199px){
+                    &{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .conbox__hdng{
+            font-size: 22px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+            @media(max-width:1199px){
+                &{
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,225 @@
+.banner-sub-page{
+    padding: 40px 0;
+    background: url(../images/about-bg.jpg);
+    @media (max-width: 539px) {
+        & {
+            padding: 25px 0;
+        }
+    }
+    .banner-sub-page-h2{
+        color: #fff;
+        font-size: 19px;
+        font-weight: 700;
+        text-transform: capitalize;
+        @media (max-width: 539px) {
+            & {
+                font-size: 15px;
+            }
+        }
+    }
+    ul{
+        li{
+            margin: 0 10px;
+            color: #fff;
+            font-size: 14px;
+            @media (max-width: 539px) {
+                & {
+                    margin: 0 3px;
+                    font-size: 12px;
+                }
+            }
+            &.active{
+                color: #c1a265;
+            }
+        }
+    }
+}
+.allServices{
+    padding: 40px 0;
+    @media (max-width: 539px) {
+        & {
+            padding: 20px 0;
+        }
+    }
+    .row{
+        row-gap: 25px;
+        @media(max-width:1023px){
+            &{
+                row-gap: 20px;
+            }
+        }
+        .col-lg-3{
+            .orPagList{
+                display: block;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 0 10px 5px rgba(0,0,0,0.03);
+                overflow: hidden;
+                margin-bottom: 20px;
+                .orPagList__item{
+                    .orPagList__btn{
+                        width: 100%;
+                        text-align: inherit;
+                        padding: 13px 18px;
+                        font-size: 14px;
+                        color: #000;
+                        border-radius: 0;
+                        font-weight: 600;
+                        &:hover{
+                            background: #f5f5f5;
+                            color: #0247af;
+                        }
+                        &.active{
+                            color: #000;
+                            background: #d8b347;
+                        }
+                    }
+                }
+            }
+            .serlink{
+                background: #fff;
+                border-radius: 4px;
+                overflow: hidden;
+                box-shadow: 0 0 10px 5px #f7f7f7;
+                margin-bottom: 15px;
+                padding: 13px 20px;
+                font-size: 14px;
+                font-weight: 600;
+                &:hover{
+                    color: #c1a265;
+                }
+            }
+        }
+        .col-lg-9{
+            .sercrd{
+                border-radius: 4px;
+                box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.03);
+                @media (max-width: 1023px) {
+                    & {
+                        margin: 0px;
+                    }
+                }
+                .sercrdImgHol {
+                    height: 330px;
+                    border-radius: 4px 4px 0 0;
+                    overflow: hidden;
+                    @media (max-width: 1399px) {
+                        & {
+                            height: 280px;
+                        }
+                    }
+                    @media (max-width: 1023px) {
+                        & {
+                            height: 250px;
+                        }
+                    }
+                    .sercrd__img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 4px 4px 0 0;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    &:hover .sercrd__img{
+                        transform: rotate(15deg) scale(1.5);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+                .sercrdBody{
+                    padding: 20px 25px;
+                    background-color: #fff;
+                    border-radius: 0 0 10px 10px;
+                    @media (max-width: 1399px) {
+                        & {
+                            padding: 15px 20px;
+                        }
+                    }
+                    @media (max-width: 1023px) {
+                        & {
+                            padding: 15px 15px;
+                        }
+                    }
+                    .sercrdBody__link{
+                        display: block;
+                        font-weight: 700;
+                        color: #000;
+                        font-size: 17px;
+                        margin-bottom: 5px;
+                        &:hover{
+                            color: #d5b159;
+                        }
+                        @media (max-width: 1399px) {
+                            & {
+                                font-size: 17px;
+                            }
+                        }
+                        @media (max-width: 1199px) {
+                            & {
+                                font-size: 15px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        @media (max-width: 1023px) {
+                            & {
+                                font-size: 14px;
+                                margin-bottom: 3px;
+                            }
+                        }
+                        @media (max-width: 539px){
+                            margin-bottom: 5px;
+                        }
+                    }
+                    p{
+                        margin: 5px 0 20px 0;
+                        font-size: 16px;
+                        color: #000;
+                        line-height: 1.7;
+                        @media (max-width: 1399px) {
+                            & {
+                                font-size: 14px;
+                            }
+                        }
+                        @media (max-width: 1023px) {
+                            & {
+                                font-size: 13px;
+                            }
+                        }
+                        @media (max-width: 539px) {
+                            & {
+                                margin: 5px 0 10px 0;
+                            }
+                        }
+                    }
+                    .sercrdBody__btn{
+                        width: fit-content;
+                        border-radius: 25px;
+                        border: 2px solid #d5b159;
+                        padding: 10px 25px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        background: #fff;
+                        color: #000;
+                        transition: all .4s ease-in-out;
+                        &:hover{
+                            background-color: #d8b347;
+                            transition: all .4s ease-in-out;
+                            color: #fff;
+                        }
+                        @media (max-width: 1399px) {
+                            & {
+                                padding: 7px 25px;
+                                font-size: 16px;
+                            }
+                        }
+                        @media (max-width: 1199px) {
+                            & {
+                                padding: 6px 20px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
