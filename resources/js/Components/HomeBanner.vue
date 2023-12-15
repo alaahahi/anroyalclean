@@ -21,53 +21,23 @@ defineProps({
 </script>
 
 <template>
-	<section class="banner">
-		<div class="bannerSl swiper">
-			<div class="swiper-wrapper">
-				<swiper
-				ref="{swiperRef}"
-				:navigation="true"
-				:slides-per-view="1"
-				:centeredSlides="true"
-				:space-between="30"
-				:loop="true"
-				:speed="800"
-				@swiper="setSwiperRef"
-				>
-				<swiper-slide class="swiper-slide">
-				<div class="bannerSlbox flex-a">
-					<img src="/assets/images/banner/1.jpg" alt="" class="bannerSlbox__img">
+	<section class="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="heroBox">
+						<img src="assets/images/banner.png" alt="" class="heroBox__img">
+					</div>
 				</div>
-				</swiper-slide>
-				<swiper-slide class="swiper-slide">
-					<div class="bannerSlbox flex-a">
-						<img src="/assets/images/banner/2.jpg" alt="" class="bannerSlbox__img">
+				<div class="col-md-7">
+					<div class="heroBox"  v-scroll-reveal-fade-up="{delay:'50'}">
+						<h5 >Innovative cleaning world</h5>
+						<h2>
+							The first machine in the Middle East and in UAE that keeps pace with the updates in the world of dry cleaning with high capabilities, ideal cost, and perfect service.
+						</h2>
 					</div>
-				</swiper-slide>
-				<swiper-slide class="swiper-slide">
-					<div class="bannerSlbox flex-a">
-						<img src="/assets/images/banner/3.jpg" alt="" class="bannerSlbox__img">
-					</div>
-				</swiper-slide>
-				<swiper-slide class="swiper-slide">
-					<div class="bannerSlbox flex-a">
-						<img src="/assets/images/banner/4.jpg" alt="" class="bannerSlbox__img">
-					</div>
-				</swiper-slide>
-				<swiper-slide class="swiper-slide">
-					<div class="bannerSlbox flex-a">
-						<img src="/assets/images/banner/5.jpg" alt="" class="bannerSlbox__img">
-					</div>
-				</swiper-slide>
-				</swiper>
+				</div>
 			</div>
-			<div class="swiper-button-prev bannerSlArr bannerSlArr2 flex-a r-50" @click="slidePrev">
-				<i class="fa-sharp fa-solid fa-chevron-left"></i>
-			</div>
-			<div class="swiper-button-next bannerSlArr bannerSlArr1 flex-a r-50" @click="slideNext">
-				<i class="fa-sharp fa-solid fa-chevron-right "></i>
-			</div>
-			
 		</div>
 	</section>
 </template>

@@ -1,6 +1,7 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
+import OurCustomers from '@/Components/OurCustomers.vue';
 
 import "swiper/css";
 let swiperRef = null;
@@ -19,162 +20,115 @@ swiperRef.slidePrev();
 
 </script>
 <template>
-  	<section class="clients">
+	<section class="clients">
 		<div class="container">
-			<h2 class="section-hdng section-hdng--clients">أبرز عملائنا الاستراتيجيين</h2>
-			<p class="clients__para">
-				نمتاز في بيت عربي بشبكة واسعة من الشراكات مع نخبة من المؤسسات الحكومية والخاصة الفاعلة باختصاصات متعددة ثقافية تجارية اجتماعية
-			</p>
-			<div class="clientsSl swiper">
+			<div class="text-center top"   v-scroll-reveal-fade-up="{delay:'50'}" >
+				<span>customers review</span>
+				<h3>What Our Client Say </h3>
+			</div>
+			<div class="reviesl swiper">
 				<swiper
-				style="padding-top: 15px;"
 				ref="{swiperRef}"
 				:modules="[Autoplay]"
 				:navigation="true"
-				:slides-per-view="7"
-				:centeredSlides="true"
-				:space-between="30"
+				:slides-per-view="2"
+				:space-between="10"
 				:loop="true"
 				:speed="800"
-				:autoplay="{
-				delay: 1000,
-				disableOnInteraction: false,
-				}"
 				@swiper="setSwiperRef"
-				>
+				style="padding: 20px 0;"
+				:autoplay="{
+						delay: 1000,
+						disableOnInteraction: false,
+						}"
+						> 
 					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/1.jpeg" alt="" class="clients-slide__img">
+						<div class="clientsCard">
+							<div class="clientsCardBox1">
+								<img src="assets/images/user.png" alt="" class="clientsCardBox1__img">
+								<h3 class="clientsCardBox1__hdng">Johance Luci</h3>
+								<span>Bussines Man</span>
+							</div>
+							<div class="clientsCardBox2">
+								<p class="clientsCardBox2__p">
+									I was pleased with the accuracy of the work and the speed of performance, which will make me a permanent customer. 
+								</p>
+								<ul class="flex-i">
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+								</ul>
+							</div>
 						</div>
 					</swiper-slide>
 					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/2.png" alt="" class="clients-slide__img">
+						<div class="clientsCard">
+							<div class="clientsCardBox1">
+								<img src="assets/images/user2.png" alt="" class="clientsCardBox1__img">
+								<h3 class="clientsCardBox1__hdng">Tom Herny</h3>
+								<span>Hotel Manager</span>
+							</div>
+							<div class="clientsCardBox2">
+								<p class="clientsCardBox2__p">
+									The work was perfect, you see the difference once the work is done. 
+								</p>
+								<ul class="flex-i">
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+								</ul>
+							</div>
 						</div>
 					</swiper-slide>
 					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/3.jpeg" alt="" class="clients-slide__img">
+						<div class="clientsCard">
+							<div class="clientsCardBox1">
+								<img src="assets/images/user.png" alt="" class="clientsCardBox1__img">
+								<h3 class="clientsCardBox1__hdng">Johance Luci</h3>
+								<span>Bussines Man</span>
+							</div>
+							<div class="clientsCardBox2">
+								<p class="clientsCardBox2__p">
+									I was pleased with the accuracy of the work and the speed of performance, which will make me a permanent customer. 
+								</p>
+								<ul class="flex-i">
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+								</ul>
+							</div>
 						</div>
 					</swiper-slide>
 					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/4.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/5.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/6.png" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/7.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/8.png" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/9.png" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/10.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/11.png" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/12.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/13.png" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/14.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/15.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/16.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/17.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/18.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/19.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/20.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/21.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/22.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/23.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/24.jpeg" alt="" class="clients-slide__img">
-						</div>
-					</swiper-slide>
-					<swiper-slide class="swiper-slide">
-						<div class="clients-slide flex-a">
-							<img src="/assets/images/clients/25.png" alt="" class="clients-slide__img">
+						<div class="clientsCard">
+							<div class="clientsCardBox1">
+								<img src="assets/images/user2.png" alt="" class="clientsCardBox1__img">
+								<h3 class="clientsCardBox1__hdng">Tom Herny</h3>
+								<span>Hotel Manager</span>
+							</div>
+							<div class="clientsCardBox2">
+								<p class="clientsCardBox2__p">
+									The work was perfect, you see the difference once the work is done. 
+								</p>
+								<ul class="flex-i">
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+									<li><i class="fa-solid fa-star"></i></li>
+								</ul>
+							</div>
 						</div>
 					</swiper-slide>
 				</swiper>
-				<div class="swiper-button-prev clientsSlArr clientsSlArr2 flex-a r-50" @click="slidePrev">
-					<i class="fa-sharp fa-solid fa-chevron-left"></i>
-				</div>
-				<div class="swiper-button-next clientsSlArr clientsSlArr1 flex-a r-50" @click="slideNext">
-					<i class="fa-sharp fa-solid fa-chevron-right"></i>
-				</div>
 			</div>
+			<OurCustomers />
 		</div>
 	</section>
 </template>

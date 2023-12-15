@@ -22,38 +22,25 @@ class PagesController extends Controller
     {
         return Inertia::render('Home');   
     }
-    public function ourStory(Request $request)
+
+
+    public function about(Request $request)
     {
-        return Inertia::render('OurStory');   
+        return Inertia::render('About');   
     }
-    public function ourClubs(Request $request)
+    public function services(Request $request)
     {
-        return Inertia::render('OurClubs');   
+        return Inertia::render('Services');   
     }
-    public function ourEvents(Request $request)
+    public function projects(Request $request)
     {
-        return Inertia::render('OurEvents');   
+        return Inertia::render('Projects');   
     }
-    public function ourLibrary(Request $request)
+    public function contact(Request $request)
     {
-        return Inertia::render('OurLibrary');   
+        return Inertia::render('Contact');   
     }
-    public function blog(Request $request)
-    {
-        return Inertia::render('Blog');   
-    }
-    public function contactUs(Request $request)
-    {
-        return Inertia::render('ContactUs');   
-    }
-    public function cart(Request $request)
-    {
-        return Inertia::render('Cart');   
-    }
-    public function productDetails(Request $request)
-    {
-        return Inertia::render('ProductDetails');   
-    }
+   
     public function blogDetails(Request $request)
     {
         return Inertia::render('BlogDetails');   

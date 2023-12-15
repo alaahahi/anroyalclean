@@ -3,13 +3,14 @@ import {ref, onMounted} from "vue";
 import "intersection-observer"; // for cross-browser support
 import MainLayout from '@/Layouts/MainLayout.vue';
 import HomeBanner from '@/Components/HomeBanner.vue';
-import HomeStory from '@/Components/HomeStory.vue';
+import HomeAbout from '@/Components/HomeAbout.vue';
 import HomeClients from '@/Components/HomeClients.vue';
-import HomeClubs from '@/Components/HomeClubs.vue';
-import HomeEvents from '@/Components/HomeEvents.vue';
-import HomeParentOpinion from '@/Components/HomeParentOpinion.vue';
-import HomeSuccess from '@/Components/HomeSuccess.vue';
-import HomeTesting from '@/Components/HomeTesting.vue';
+import HomeServices from '@/Components/HomeServices.vue';
+
+
+import RecentProjects from '@/Components/RecentProjects.vue';
+
+import HomeContact from '@/Components/HomeContact.vue';
 import { Link } from '@inertiajs/inertia-vue3';
 import Vue3AutoCounter from 'vue3-autocounter';
 
@@ -62,21 +63,6 @@ const slidePrev = () => {
 
 const showContent = ref(true);
 
-// const questions = ref([
-//   {
-//     id: 1,
-//     text: "Question 1",
-//     answer: "It is a long established fact that a reader will be distracted...",
-//     isOpen: false,
-//   },
-//   {
-//     id: 2,
-//     text: "Question 2",
-//     answer: "It is a long established fact that a reader will be distracted...",
-//     isOpen: false,
-//   },
-//   // Add more questions and answers
-// ]);
 
 const toggleAnswer = (question) => {
   question.isOpen = !question.isOpen;
@@ -105,12 +91,13 @@ function submit() {
 <template>
   <MainLayout :isHome="true">
     <HomeBanner />
-    <HomeStory />
-    <HomeClubs />
-    <HomeParentOpinion />
-    <HomeTesting />
-    <HomeEvents />
+    <HomeAbout />
+    <HomeServices />
+    <RecentProjects />
     <HomeClients />
-    <HomeSuccess />
+    <HomeContact />
+    <section class="map"  v-scroll-reveal-fade-up="{delay:'50'}">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29045.128855864074!2d54.368449!3d24.497889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e674cfedf9ecb%3A0x4b962449bcd2e098!2sAl%20Salam%20Tower!5e0!3m2!1sen!2sae!4v1660052522304!5m2!1sen!2sae"></iframe>
+	  </section>
   </MainLayout>
 </template>

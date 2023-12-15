@@ -51,10 +51,11 @@ Route::middleware([
 });
 
 Route::get('/', [PagesController::class, 'home'])->name('/');
-Route::get('/our-story', [PagesController::class, 'ourStory'])->name('our-story');
-Route::get('/our-clubs', [PagesController::class, 'ourClubs'])->name('our-clubs');
-Route::get('/our-events', [PagesController::class, 'ourEvents'])->name('our-events');
-Route::get('/our-library', [PagesController::class, 'ourLibrary'])->name('our-library');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/services', [PagesController::class, 'services'])->name('services');
+Route::get('/projects', [PagesController::class, 'projects'])->name('projects');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+
 Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
 Route::get('/contact-us', [PagesController::class, 'contactUs'])->name('contact-us');
 Route::get('/cart', [PagesController::class, 'cart'])->name('cart');
